@@ -1,7 +1,9 @@
-import Head from 'next/head';
-import '@/app/ui/global.css';
-import { inter } from '@/app/ui/fonts';
-import SideNav from '@/app/ui/sidenav';
+import Head from "next/head";
+import "@/components/global.css";
+import { inter } from "@/components/fonts";
+import Nav from "@/components/nav";
+import { ThemeProvider } from "next-themes";
+import Footer from "@/components/footer";
 
 export default function RootLayout({
   children,
@@ -10,12 +12,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
-      <div className="w-full flex-none md:w-64">
-        <SideNav />
-      </div>
-      <div className="flex-grow p-6 md:overflow-y-auto md:p-12">{children}</div>
-    </div>
+      <body>
+        <div className="flex h-screen flex-col">
+          <Nav />
+          <main className="main bg-background">{children}</main>
+          <Footer />
+          <div className="flex-grow overflow-y-auto">{children}</div>
+        </div>
+      </body>
     </html>
   );
 }
