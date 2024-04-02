@@ -1,8 +1,4 @@
-import CASLogo from "@/components/Globe-logo";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
 import { lusitana } from "@/components/fonts";
-import Image from "next/image";
 import Card from "@/components/card";
 
 export default function Page() {
@@ -10,7 +6,6 @@ export default function Page() {
     <main className="flex flex-col min-h-screen px-10 py-6 gap-y-2.5">
       <div className="mb-6">
         {" "}
-        {/* Add margin bottom for spacing */}
         <p
           className={`${lusitana.className} text-xl text-gray-800 md:text-3xl md:leading-normal`}
         >
