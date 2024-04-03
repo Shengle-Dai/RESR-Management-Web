@@ -17,27 +17,47 @@ input[type='number']::-webkit-outer-spin-button {
   margin: 0;
 }
 
-
 .gallery-container {
   display: flex;
   overflow-x: auto;
-  gap: 10px; /* Adjust the gap between images */
-}
-
-.gallery-image {
-  flex: 0 0 auto; /* Flexbox setting to align images in a row */
-  width: 200px; /* Adjust the width as needed */
-  height: auto; /* Keep aspect ratio */
-}
-
-/* Optional: Style for hiding scrollbars but still allowing scrolling */
-.gallery-container::-webkit-scrollbar {
-  display: none;
-}
-
-.gallery-container {
-  width: 100%;
+  overflow-y: hidden;
+  white-space: nowrap;
   padding: 20px;
-  box-sizing: border-box;
-  /* Additional styles as needed */
+  gap: 10px;
+  background-color: #f5f5f5; /* Adds a light background for contrast */
+  border-radius: 10px;       /* Rounds the corners for a softer look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
+  scrollbar-width: thin;     /* Makes the scrollbar thinner */
+  scrollbar-color: #888 #f5f5f5; /* Colors for the scrollbar */
+  height: 300px
+}
+
+/* Style for the scrollbar for Webkit browsers */
+.gallery-container::-webkit-scrollbar {
+  height: 6px; /* Height of the scrollbar */
+}
+
+.gallery-container::-webkit-scrollbar-track {
+  background: #f5f5f5; /* Background of the scrollbar track */
+}
+
+.gallery-container::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px;    /* Rounded corners for the scrollbar thumb */
+  border: 2px solid #f5f5f5; /* Creates a margin between track and thumb */
+}
+
+.coating-detail {
+  background-color: lightgrey;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.selected-category-details {
+  background: #f0f0f0;
+  padding: 20px;
+  margin-top: 15px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
 }

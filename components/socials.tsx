@@ -1,9 +1,8 @@
 import { GitHub, Linkedin } from "react-feather";
 
-// TODO: replace social icons with more interesting ones
 export function Socials() {
   return (
-    <ul className="flex gap-3 mb-4">
+    <ul className="flex gap-3">
       <li className="block">
         <a
           className="text-accent-4 hover:text-accent-2"
@@ -12,7 +11,7 @@ export function Socials() {
           rel="noreferrer noopener"
           aria-label="github"
         >
-          <GitHub size={18} />
+          <GitHub size={20} />
         </a>
       </li>
 
@@ -24,7 +23,7 @@ export function Socials() {
           rel="noreferrer noopener"
           aria-label="linkedin"
         >
-          <Linkedin size={18} />
+          <Linkedin size={20} />
         </a>
       </li>
     </ul>

@@ -1,14 +1,14 @@
-import { Container } from "@/components/container";
 import { Socials } from "@/components/socials";
 
 export function Footer() {
   return (
-    <footer className="py-5 bg-gray-50">
-      <Container className="flex justify-between">
-        <p>&copy; Shengle Dai</p>
-
-        <Socials />
-      </Container>
+    <footer className="bg-gray-800 text-white py-4">
+      <div className="container mx-auto flex justify-between items-center">
+        <div className="text-lg font-semibold">&copy; Shengle Dai</div>
+        <div>
+          <Socials />
+        </div>
+      </div>
     </footer>
   );
 }

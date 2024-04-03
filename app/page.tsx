@@ -1,18 +1,14 @@
-import { lusitana } from "@/components/fonts";
 import Card from "@/components/card";
+import IntroParagraph from "@/components/IntroParagraph";
 
 export default function Page() {
   return (
-    <main className="flex flex-col min-h-screen px-10 py-6 gap-y-2.5">
-      <div className="mb-6">
-        {" "}
-        <p
-          className={`${lusitana.className} text-xl text-gray-800 md:text-3xl md:leading-normal`}
-        >
-          <strong>Welcome to RESR Management System.</strong> This is the manage
-          system for the Rare Earth Secondary Resources database.
-        </p>
-      </div>
+    <>
+      <IntroParagraph
+        title="Welcome to RESR Management System."
+        description="This is the manage system for the Rare Earth Secondary Resources database"
+      />
+
       <div className="w-full px-[100px] justify-center">
         {" "}
         <Card
@@ -48,6 +44,6 @@ export default function Page() {
           href="/coatings"
         ></Card>
       </div>
-    </main>
+    </>
   );
 }

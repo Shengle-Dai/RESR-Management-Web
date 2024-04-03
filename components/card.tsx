@@ -2,7 +2,7 @@ import { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-interface ICardProps {
+interface CardProps {
   title: string;
   description: string;
   imageUrl?: string;
@@ -11,7 +11,7 @@ interface ICardProps {
   href: string;
 }
 
-const Card: FC<ICardProps> = ({
+const Card: FC<CardProps> = ({
   title,
   description,
   imageUrl,

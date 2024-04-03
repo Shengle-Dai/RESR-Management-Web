@@ -1,4 +1,4 @@
-export interface ShapeImage {
+export interface ImageData {
   id: number;
   base64_data: string;
 }
@@ -6,5 +6,19 @@ export interface ShapeImage {
 export interface Shape {
   id: number;
   name: string;
-  images?: ShapeImage[];
+  images?: ImageData[];
+}
+
+export interface Coating {
+  id: number;
+  sub_category: string;
+  thickness: string;
+  color: string;
+}
+
+export interface CoatingCategory {
+  id: number;
+  name: string;
+  coatings: Coating[];
+  images?: ImageData[];
 }
