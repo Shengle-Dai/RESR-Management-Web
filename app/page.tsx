@@ -14,7 +14,7 @@ export default function Page() {
         <Card
           title="Magnetic Materials"
           description="Magnetic materials are materials that can be magnetized or attracted to a magnet. These materials are typically classified based on their magnetic properties, which arise from the magnetic moments of their atoms."
-          imageUrl="/magnetic-material.png"
+          imageUrl="/homepage/magnetic-materials.png"
           imageWidth={600}
           imageHeight={400}
           href="/magnetic-materials"
@@ -27,7 +27,7 @@ export default function Page() {
         <Card
           title="Shapes"
           description="Magnetic materials can be formed into various shapes depending on their intended application. The shape of a magnetic material can significantly influence its magnetic properties and effectiveness in different uses."
-          imageUrl="/shape.png"
+          imageUrl="/homepage/shapes.png"
           imageWidth={600}
           imageHeight={400}
           href="/shapes"
@@ -38,10 +38,21 @@ export default function Page() {
         <Card
           title="Coatings"
           description="Metal coating is a process used to deposit a layer of one metal onto the surface of another, either to enhance the appearance or to impart other beneficial properties to the base material."
-          imageUrl="/coating.png"
+          imageUrl="/homepage/coatings.png"
           imageWidth={600}
           imageHeight={400}
           href="/coatings"
+        ></Card>
+      </div>
+      <div className="w-full px-[100px] justify-center">
+        {" "}
+        <Card
+          title="Experiments"
+          description="Metal coating is a process used to deposit a layer of one metal onto the surface of another, either to enhance the appearance or to impart other beneficial properties to the base material."
+          imageUrl="/homepage/experiments.png"
+          imageWidth={600}
+          imageHeight={400}
+          href="/experiments"
         ></Card>
       </div>
     </>

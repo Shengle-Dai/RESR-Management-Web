@@ -15,9 +15,9 @@ import clsx from "clsx";
 const links = [
   { name: "Home", href: "/", icon: HomeIcon },
   {
-    name: "Magnetic Materials",
-    href: "/magnetic-materials",
-    icon: DocumentTextIcon,
+    name: "Coatings",
+    href: "/coatings",
+    icon: ForwardIcon,
   },
   {
     name: "Shapes",
@@ -25,9 +25,19 @@ const links = [
     icon: Square2StackIcon,
   },
   {
-    name: "Coatings",
-    href: "/coatings",
-    icon: ForwardIcon,
+    name: "Magnetic Materials",
+    href: "/magnetic-materials",
+    icon: DocumentTextIcon,
+  },
+  {
+    name: "Experiments",
+    href: "/experiments",
+    icon: DocumentTextIcon,
+  },
+  {
+    name: "Platform ERD",
+    href: "/erd",
+    icon: DocumentTextIcon,
   },
 ];
 

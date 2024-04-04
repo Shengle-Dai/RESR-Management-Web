@@ -22,3 +22,9 @@ export interface CoatingCategory {
   coatings: Coating[];
   images?: ImageData[];
 }
+
+export interface MagneticMaterial {
+  id: number;
+  name: string;
+  is_rare_earth: boolean;
+}
