@@ -1,7 +1,28 @@
+import Table from "./table";
+import React, { useState, useEffect } from "react";
+import { fetchExcelData } from "@/utils/data";
+import { TableCell } from "@/utils/definitions";
+
 const ColorSimilarityMethods = () => {
+  const [tableHeaders, setTableHeaders] = useState<TableCell[]>([]);
+  const [tableData, setTableData] = useState<Array<TableCell[]>>([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    fetchExcelData("/experiments/excel1.xlsx")
+      .then(({ headers, data }) => {
+        setTableHeaders(headers);
+        setTableData(data);
+      })
+      .catch((err) => {
+        console.error("Failed to load Excel data:", err);
+        setError(err.message);
+      });
+  }, []);
+
   return (
     <div>
-      <p>
+      <p style={{ marginBottom: "20px" }}>
         通过限定环境要素来观察颜色相近镀层的反射能力强弱,
         两个材料由于表面粗糙度不同, 不同环境下灰度值的差值不同,
         根据反射能力大小对他们所占的比重进行拟合放大倍数的选取,
@@ -28,8 +49,7 @@ const ColorSimilarityMethods = () => {
         <br />
         𝛾是不同材料, 黑白背景板差值差异的放大系数.
       </p>
-
-      <p></p>
+      <Table headers={tableHeaders} data={tableData} orientation="row" />
     </div>
   );
 };

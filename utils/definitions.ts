@@ -28,3 +28,8 @@ export interface MagneticMaterial {
   name: string;
   is_rare_earth: boolean;
 }
+
+export type TableCell = {
+  value: React.ReactNode;
+  highlight?: boolean;
+};

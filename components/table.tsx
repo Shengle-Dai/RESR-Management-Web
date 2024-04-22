@@ -1,8 +1,9 @@
 import React from "react";
+import { TableCell } from "@/utils/definitions";
 
 type TableProps = {
-  headers: Array<{ value: string; highlight?: boolean }>; // Changed from `label` to `value`
-  data: Array<Array<{ value: React.ReactNode; highlight?: boolean }>>;
+  headers: Array<TableCell>;
+  data: Array<Array<TableCell>>;
   orientation: "row" | "column";
 };
 

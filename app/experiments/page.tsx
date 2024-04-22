@@ -6,7 +6,6 @@ import ColorRecognition from "@/components/ColorRecognition";
 import ColorSimilarityResults from "@/components/ColorSimilarityResults";
 import ExperimentSection from "@/components/ExperimentSection";
 import ColorSimilarityMethods from "@/components/ColorSimilarityMethods";
-import Table from "@/components/table";
 
 const CoatingsPage = () => {
   return (
