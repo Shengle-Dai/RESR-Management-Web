@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ColorRecognitionGraphs from "./ColorRecognitionGraphs";
+import ColorRecognitionGraphs from "./ColorRecognition";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 
 interface SectionProps {

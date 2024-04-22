@@ -1,11 +1,9 @@
 import React from "react";
 import { Coating } from "@/utils/definitions"; // adjust the import path as necessary
 
-interface CoatingDetailsProps {
+const CoatingDetails: React.FC<{
   coating: Coating;
-}
-
-const CoatingDetails: React.FC<CoatingDetailsProps> = ({ coating }) => {
+}> = ({ coating }) => {
   return (
     <div className="coating-detail">
       <h3>Subcategory: {coating.sub_category}</h3>
