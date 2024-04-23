@@ -12,15 +12,14 @@ const Table: React.FC<TableProps> = ({ headers, data, orientation }) => {
     cell: { value: React.ReactNode; highlight?: boolean },
     isHeader = false
   ) => {
-    const baseStyle = "border px-3 py-2";
-    const highlightStyle = "bg-yellow-300"; // Highlight style for data cells
-    const headerHighlightStyle = "bg-yellow-200"; // Highlight style for headers
-    const textStyle = isHeader ? "text-center" : ""; // Center text only for headers
+    const baseStyle = "border px-2 py-1";
+    const highlightStyle = "bg-yellow-200";
+    const headerColor = "bg-gray-100";
+    const textStyle = "text-center";
 
-    // Apply highlight styles conditionally
     const style = `${baseStyle} ${textStyle} ${
-      cell.highlight ? (isHeader ? headerHighlightStyle : highlightStyle) : ""
-    }`;
+      cell.highlight ? highlightStyle : ""
+    } ${isHeader ? headerColor : ""}`;
 
     if (isHeader) {
       return <th className={style}>{cell.value}</th>;

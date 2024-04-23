@@ -33,3 +33,18 @@ export type TableCell = {
   value: React.ReactNode;
   highlight?: boolean;
 };
+
+export interface Material {
+  id: number;
+  grade: string;
+  br_t: number;
+  hcb_kA_m: number;
+  bh_max_kj_m3: number;
+}
+
+export interface MaterialCategory {
+  id: number;
+  name: string;
+  is_rare_earth: boolean;
+  materials: Material[];
+}

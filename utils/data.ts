@@ -79,3 +79,29 @@ export const fetchExcelData = async (filePath: string) => {
     throw error;
   }
 };
+
+export const fetchAllMaterialCategories = async () => {
+  try {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/materials/categories`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error('Error fetching coatings:', error);
+    throw error;
+  }
+}
+
+export const fetchMaterialCategoryDetails = async (categoryId: number) => {
+  try {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/materials/categories/${categoryId}`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error(`Error fetching details for material category ${categoryId}:`, error);
+    throw error;
+  }
+}
