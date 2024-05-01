@@ -1,11 +1,38 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Card from "@/components/card";
 import IntroParagraph from "@/components/IntroParagraph";
+import initTranslations from "@/app/i18n";
+import TranslationsProvider from "@/components/TranslationsProvider";
 
-export default function Page() {
+type TranslationFunction = (key: string, ...args: any[]) => string;
+const i18nNamespaces = ["home"];
+
+export default function Page({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  const [t, setT] = useState<TranslationFunction | null>(null);
+  useEffect(() => {
+    initTranslations(locale, i18nNamespaces)
+      .then((result) => {
+        setT(() => result.t);
+      })
+      .catch((error) => {
+        console.error("Failed to initialize translations:", error);
+      });
+  }, [locale]);
+
+  if (!t) {
+    return <p>Loading translations...</p>;
+  }
+
   return (
-    <>
+    <TranslationsProvider locale="en" namespaces={i18nNamespaces}>
       <IntroParagraph
-        title="Welcome to RESR Management System."
+        title={t("welcome")}
         description="This is the manage system for the Rare Earth Secondary Resources database"
       />
 
@@ -18,9 +45,7 @@ export default function Page() {
           imageWidth={600}
           imageHeight={400}
           href="/magnetic-materials"
-        >
-          {/* Additional content can be added here */}
-        </Card>
+        ></Card>
       </div>
       <div className="w-full px-[100px] justify-center">
         {" "}
@@ -55,6 +80,6 @@ export default function Page() {
           href="/experiments"
         ></Card>
       </div>
-    </>
+    </TranslationsProvider>
   );
 }

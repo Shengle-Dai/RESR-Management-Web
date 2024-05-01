@@ -10,6 +10,7 @@ import {
   Square2StackIcon,
 } from "@heroicons/react/24/outline";
 import { usePathname } from "next/navigation";
+import { useTranslation } from "react-i18next";
 import clsx from "clsx";
 
 const links = [
@@ -42,6 +43,7 @@ const links = [
 ];
 
 function NavLinks() {
+  const { t } = useTranslation();
   const pathname = usePathname();
   return (
     <>
