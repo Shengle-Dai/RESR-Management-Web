@@ -3,11 +3,11 @@ Run the project:
    
 This command installs required dependencies
 
-3. command line: npm run dev
+2. command line: npm run dev
    
 This command runs the nextjs project at http://localhost:3000
 
-5. go to http://localhost:3000 and you'll see the project
+3. go to http://localhost:3000 and you'll see the project
 
 
 Screenshots:
