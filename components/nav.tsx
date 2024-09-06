@@ -83,12 +83,12 @@ export default function Nav() {
         </Link>
         <NavLinks />
         <div className="hidden h-[48px] w-full grow rounded-md bg-gray-100 md:block"></div>
-        <form>
+        {/* <form>
           <button className="flex h-[48px] w-full grow items-center justify-center gap-2 rounded-md bg-gray-100 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:w-auto md:justify-start md:p-2 md:px-3">
             <PowerIcon className="w-6" />
             <div className="hidden md:block">Sign Out</div>
           </button>
-        </form>
+        </form> */}
       </div>
     </div>
   );

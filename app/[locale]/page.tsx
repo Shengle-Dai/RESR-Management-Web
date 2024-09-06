@@ -33,7 +33,7 @@ export default function Page({
     <TranslationsProvider locale="en" namespaces={i18nNamespaces}>
       <IntroParagraph
         title={t("welcome")}
-        description="This is the manage system for the Rare Earth Secondary Resources database"
+        description="This is a platform for researchers to share data on Rare Earth Secondary Resources."
       />
 
       <div className="w-full px-[100px] justify-center">
