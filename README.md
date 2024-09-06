@@ -1,3 +1,5 @@
+Backend Repo: https://github.com/Shengle-Dai/RESR-Platform-API
+
 Run the project: 
 1. command line: npm i
    
